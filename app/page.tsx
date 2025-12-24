@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 type ViewState = "normal" | "smell" | "touch" | "sound" | "warmth" | "header";
 
@@ -19,6 +20,7 @@ const sectionData = {
     icon: "🌲",
     title: "Smell & Memory",
     tagline: "Christmas through scent",
+    image: "/smell-image.jpg",
     openingLine:
       "Smell is one of the strongest triggers of memory. This zone invites you to experience Christmas through familiar festive scents that many of us associate with warmth, home, and celebration.",
     audience: [
@@ -52,6 +54,7 @@ const sectionData = {
     icon: "🧶",
     title: "Touch & Texture",
     tagline: "Christmas felt, not seen",
+    image: "/touch-image.jpg",
     openingLine:
       "Christmas isn't just seen — it's felt. This zone focuses on textures that bring comfort, warmth, and childhood memories to life.",
     audience: [
@@ -89,6 +92,7 @@ const sectionData = {
     icon: "🔔",
     title: "Sound & Belonging",
     tagline: "Christmas comes alive through sound",
+    image: "/sound-image.jpg",
     openingLine:
       "For many, Christmas comes alive through sound — music, laughter, bells, and familiar festive rhythms.",
     audience: [
@@ -122,6 +126,7 @@ const sectionData = {
     icon: "❤️",
     title: "The Warmest Christmas",
     tagline: "It's about emotion",
+    image: "/christmas-feel.jpg",
     openingLine:
       "This zone brings everything together. It's not about decoration — it's about emotion.",
     audience: ["Everyone."],
@@ -405,18 +410,19 @@ export default function Home() {
             <span className="text-xl md:text-2xl font-light">✕</span>
           </button>
 
+          {/* Hero Image */}
+          <div className="relative w-full aspect-video md:aspect-[2.35/1] overflow-hidden">
+            <Image
+              src={sectionData[currentView].image}
+              alt={sectionData[currentView].title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+
           {/* Content */}
           <div className="relative z-10 flex flex-col items-center px-6 py-10 md:px-12 md:py-16 max-w-2xl mx-auto">
-            {/* Icon */}
-            <div
-              className="w-20 h-20 md:w-28 md:h-28 rounded-full flex items-center justify-center mb-6"
-              style={{ background: "rgba(255,255,255,0.15)" }}
-            >
-              <span className="text-4xl md:text-5xl">
-                {sectionData[currentView].icon}
-              </span>
-            </div>
-
             {/* Title */}
             <h1 className="font-display text-2xl md:text-4xl font-semibold tracking-wide mb-4 text-center">
               {sectionData[currentView].title}
