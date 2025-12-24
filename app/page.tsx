@@ -1,6 +1,40 @@
 export default function Home() {
   return (
     <main className="min-h-svh flex flex-col">
+      {/* Header Quote */}
+      <header className="relative py-6 px-6 text-center border-b border-gold/20 overflow-hidden">
+        {/* Snowflakes - subtle decoration */}
+        <span className="absolute top-2 left-4 text-ivory/20 text-xs md:text-sm">
+          ❄
+        </span>
+        <span className="absolute top-4 left-12 text-ivory/15 text-[10px] md:text-xs">
+          ✻
+        </span>
+        <span className="absolute bottom-3 left-8 text-ivory/10 text-xs">
+          ❅
+        </span>
+        <span className="absolute top-2 right-4 text-ivory/20 text-xs md:text-sm">
+          ❄
+        </span>
+        <span className="absolute top-5 right-14 text-ivory/15 text-[10px] md:text-xs">
+          ✻
+        </span>
+        <span className="absolute bottom-2 right-6 text-ivory/10 text-xs">
+          ❅
+        </span>
+
+        <p
+          className="font-display text-base md:text-xl lg:text-2xl italic text-ivory/90 relative z-10"
+          style={{
+            textShadow:
+              "0 0 20px rgba(212,175,55,0.4), 0 0 40px rgba(212,175,55,0.2)",
+          }}
+        >
+          &quot;Christmas isn&apos;t just seen — it&apos;s felt, touched,
+          shared, and lived.&quot;
+        </p>
+      </header>
+
       {/* Quadrant Grid - 2x2 on mobile, fills viewport */}
       <div className="grid grid-cols-2 grid-rows-2 flex-1 relative">
         {/* Central glowing element */}
@@ -125,14 +159,6 @@ export default function Home() {
           </p>
         </section>
       </div>
-
-      {/* Footer Quote */}
-      <footer className="py-4 px-6 text-center border-t border-gold/20">
-        <p className="font-display text-sm md:text-lg italic text-ivory/70">
-          &quot;Christmas isn&apos;t just seen — it&apos;s felt, touched,
-          shared, and lived.&quot;
-        </p>
-      </footer>
     </main>
   );
 }
