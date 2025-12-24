@@ -1,0 +1,22 @@
+---
+alwaysApply: true
+---
+A single-page website exploring how Christmas is experienced by people with different physical abilities (deaf, blind, mute, and a fourth perspective). The goal is to celebrate diverse sensory experiences of Christmas — warm and inclusive, not clinical.
+Layout:
+Screen divided into 4 distinct sections (quadrant grid preferred), each representing one experience. Sections should feel distinct but visually connected — unified by a central glowing element or shared design language.
+Mood: Celebratory, warm, intimate
+Color Palette:
+
+Wine Burgundy: #722F37
+Festive Gold: #D4AF37
+Forest Sage: #4A5D4A
+Warm Ivory: #F5EBE0
+Deep Brown (text): #3D2914
+
+Typography:
+
+Headers: Cormorant Garamond (Google Fonts)
+Body: Atkinson Hyperlegible (Google Fonts)
+
+*Some Pointers to keep in mind*
+- It should be highly optimized for mobiles because most people will use it there itself. 
